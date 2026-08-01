@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+}
+
+.mels-icon-wrap {
+  @apply inline-flex h-14 w-14 items-center justify-center rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-100 shadow-sm transition-all duration-300 ease-out dark:border-blue-900/60 dark:from-slate-800 dark:to-slate-700;
+}
+
+.mels-icon-wrap:hover .mels-icon {
+  transform: rotate(10deg);
+}
+
+.mels-icon {
+  transition: transform 300ms ease;
+}
+
+.mels-icon-float {
+  animation: mels-float 4.8s ease-in-out infinite;
+}
+
+.mels-icon-glow {
+  box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.25), 0 10px 20px -12px rgba(37, 99, 235, 0.35);
+}
+
+@keyframes mels-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
